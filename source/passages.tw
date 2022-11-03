@@ -1,5 +1,9 @@
 :: Start
-Ooga Booga McGee! This is the first passage in your game with just one variable called myVariable that has a value of $myVariable.  There are two passages in this template, and the other can be found [[here|Passage 2]]
+Ooga Booga McGee! This is the first passage in your game with just one variable called myVariable that has a value of $myVariable.  There are two passages in this template, and the other can be found [[here|Passage 2]], Also this section will need a press play button like any other game!
 
 :: Passage 2
-And here we are!
+And here we are! here we will have the introduction about the current setting and you will have multiple options like [[This one|Passage 3]]
+
+
+:: Passage 3
+Jolly Good Show!
