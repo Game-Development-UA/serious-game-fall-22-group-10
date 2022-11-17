@@ -1,18 +1,24 @@
 :: Start
-Ooga Booga McGee! This is the first passage in your game with just one variable called myVariable that has a value of $myVariable.  There are two passages in this template, and the other can be found [[here|Passage 2]], Also this section will need a press play button like any other game!
+The Uprising 
+[[Start|Passage 3]]
+[[Quit| Passage 2]]
 
 :: Passage 2
-And here we are! here we will have the introduction about the current setting and you will have multiple options like [[This one|Passage 3]]
-
+This game does not have a functioning quit button :C, so..... [[Start| Passage 3]] the game?
 
 :: Passage 3
-Jolly Good Show!
+A Child asks for the last piece of bread that you have. You look at the poor child's face, you can see his impending death in his eyes. 
+[[Give Bread|Passage 4]]
+[[Keep Bread|Passage 5]]
 <<if $testing == true>> [[test mode|Passage 4]]
 <<else>> [[no test mode|Passage 5]]
 <</if>>
 
 :: Passage 4
-test gang
-
+The child remembers your action 
+<<set $rep += 1>>
+rep test <<print $rep>>
 :: Passage 5
-no test :(
+The child remembers your action 
+<<set $rep -= 1>>
+rep test <<print $rep>>
