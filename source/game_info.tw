@@ -11,5 +11,7 @@ The Uprising
 
 :: StoryInit
 <<set $myVariable to 9000000>>
+<<set $name to "">>
 <<set $rep to 0>>
+<<set $Jessielikeyou to true>>
 <<set $testing to false>>
