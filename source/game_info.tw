@@ -11,3 +11,4 @@ The Uprising
 
 :: StoryInit
 <<set $myVariable to 9000000>>
+<<set $testing to false>>

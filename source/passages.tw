@@ -7,3 +7,12 @@ And here we are! here we will have the introduction about the current setting an
 
 :: Passage 3
 Jolly Good Show!
+<<if $testing == true>> [[test mode|Passage 4]]
+<<else>> [[no test mode|Passage 5]]
+<</if>>
+
+:: Passage 4
+test gang
+
+:: Passage 5
+no test :(

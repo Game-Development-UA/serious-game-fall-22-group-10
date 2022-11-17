@@ -46,10 +46,11 @@ If I want to check its length and display the first item from it:
 
 
 :: Get a passage's tags as an array
-<<nobr>
+<<nobr>>
 <<if tags().includes("outside")>>
 <<if $raining is true>>
 Rain spatters the dirt.
+<</if>>
 <</if>>
 <</nobr>>
 
