@@ -3,6 +3,9 @@ The Uprising
 [[Start|Passage 3]]
 [[Quit| Passage 2]]
 
+:: PassageFooter
+Current rep: $rep
+
 :: Passage 2
 This game does not have a functioning quit button :C, so..... [[Start| Passage 3]] the game?
 
