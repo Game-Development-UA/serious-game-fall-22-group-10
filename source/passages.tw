@@ -1,10 +1,12 @@
 :: Start
 The Uprising 
+Before you start the game please enter your name: <<textbox "$name" 'Type name Here'>>
+
 [[Start|Passage 3]]
 [[Quit| Passage 2]]
 
 :: PassageFooter
-Current Rep: $rep
+Current Rep: <<print $rep>>
 
 :: Passage 2
 This game does not have a functioning quit button :C, so..... [[Start| Passage 3]] the game?
@@ -19,12 +21,60 @@ A Child asks for the last piece of bread that you have. You look at the poor chi
 
 :: Passage 4
 The child remembers your action 
+<<set $Jessielikeyou to true>>
 [[Proceed| Passage 6]] <<set $rep += 1>>
 
 rep test <<print $rep>>
 :: Passage 5
 The child remembers your action 
-<<set $rep -= 1>>
-rep test <<print $rep>>
+<<set $Jessielikeyou to false>>
+[[Proceed| Passage 6]]<<set $rep -= 1>>
+
 
 :: Passage 6
+?: Hello <<if $rep < 0 >>
+Master <<print $name>>, The elections are coming up do you plan of running again?
+[[Yes | Passage BadYes1]]
+[[No | Passage BadNo1]]
+<<else>> Sir <<print $name>>
+<</if>>
+
+:: Passage BadYes1
+?: Aye! Marvioulous Master. Your opposing canditdate seems to be a guy name Jessie Blueman who comes from a poor village named New Mexico. I wonder how he has gotten money to support his campaign?
+
+<<print $name>>: [[Yes, that is quite interesting... | Passage 8]]
+
+:: Passage BadNo1
+What the sweaty bullocks, man! Why are you not running for president? <<set $rep -= 2>>
+[[Why would I run when I am already ruler for life? | Passage BadNo2]]
+
+:: Passage BadYes2
+<<print $name>>: Advisor Jacques, I would like for you to send down the Agents to investigate into this individiual.
+Advisor Jacques: Got it, Mr President!
+[[Proceed | Passage BadYes3]]
+
+:: Passage BadYes3
+The Agents have arrived into the poor village, New Mexico. They await for your orders
+[[Investigate his income | Income1]]
+[[Investigate his family | Family1]]
+
+:: Income1
+Agents: Roger that, Mr President.
+The Agents discover Jessie Blueman has obtained his money by selling illegally manufactured crystal METH.
+[[Go public with the information | Public1]]
+[[Blackmail your opponent | Blackmail1]]
+
+:: Public1
+You release your findings to the public through a national newspaper. Jessie Blueman is promptly arrested.
+With no one to contest you in the election, you are able to win with a record number of votes.
+[[2nd term babyyyyyyy | President]]
+
+:: Blackmail1
+You threaten to release the results of the investigation to the public if he does not step down from his campaign.
+With his reputation on the line, Jessie Blueman removes himself from consideration, and you win the election uncontested.
+[[2nd term babyyyyyyy | President]]
+
+:: Family1
+
+
+:: President
