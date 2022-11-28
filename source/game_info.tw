@@ -15,3 +15,4 @@ The Uprising
 <<set $rep to 0>>
 <<set $Jessielikeyou to true>>
 <<set $testing to false>>
+<<set $JacquesRebellion to false>>
