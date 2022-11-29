@@ -401,7 +401,7 @@ pick up his phone and hear the voice of the child. THE CHILD with impending deat
 [[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye]]
 [[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye]]
 [[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye]]
-Usmana Population: 4,000,000
+Usmana Population: 4,000,000 <<set $rep -= 1000000000>>
 
 :: BluemanByeBye
 <I>You pick up the phone and call the Agents to find Jessie; however, the Agents couldn't find him with a 2 month search.
