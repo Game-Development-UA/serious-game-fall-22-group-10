@@ -68,7 +68,7 @@ You raise taxes on the people, causing outrage. Over time, however, you know tha
 [[Proceed | ProblemHub]]
 
 :: Export
-By exporting your excess, you are able to not only return people's faith in the government, but boost the economy to a point it hasn't to in years. <<set $rep += 5>> <<set $economyfixed = true>>
+By exporting your excess, you are able to not only return people's faith in the government, but boost the economy to a point it hasn't been to in years. <<set $rep += 5>> <<set $economyfixed = true>>
 
 [[Proceed | ProblemHub]]
 
@@ -78,7 +78,15 @@ By exporting your excess, you are able to not only return people's faith in the 
 As a result of the previous president's incompetence, your people are left starving. What solution do you propose?
 
 [[Increase spending on agriculture | Agriculture]]
-[[]]
+[[Increase trade with neighboring countries | Trade]]
+
+:: Agriculture
+You opt to give more money to the country's food producers, allowing them to support themselves and increase crop yields. <<set $rep += 1>> <<set $foodfixed = true>>
+
+[[Proceed | ProblemHub]]
+
+:: Trade
+
 
 :: FixMilitary1
 
@@ -92,18 +100,10 @@ You glance back at the list of problems before you.
 <<if $economyfixed and $foodfixed and $militaryfixed and $crimefixed>>
 [[Proceed | Retire]]
 <<else>>
-    <<if $economyfixed == false>>
-    [[Fix Economy | FixEconomy1]]
-    <</if>>
-    <<if $foodfixed == false>>
-    [[Fix Food Crisis | FoodCrisis1]]
-    <</if>>
-    <<if $militaryfixed == false>>
-    [[Fix Military | FixMilitary1]]
-    <</if>>
-    <<if $crimefixed == false>>
-    [[Fix Crime Outbreak | FixCrime1]]
-    <</if>>
+    <<if $economyfixed == false>>[[Fix Economy | FixEconomy1]]<</if>>
+    <<if $foodfixed == false>>[[Fix Food Crisis | FoodCrisis1]]<</if>>
+    <<if $militaryfixed == false>>[[Fix Military | FixMilitary1]]<</if>>
+    <<if $crimefixed == false>>[[Fix Crime Outbreak | FixCrime1]]<</if>>
 <</if>>
 
 
@@ -111,7 +111,7 @@ You glance back at the list of problems before you.
 
 <!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------DON'T GIVE BREAD TO JESSIE/2ND ELECTION RACE----------------------------------->
+<!--------------------------------------------DON'T GIVE BREAD TO JESSIE------------------------------------------------>
 <!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
 
@@ -158,13 +158,13 @@ You watch as blood spews from his cranium and paints the walls and your furnitur
 <I> You go pick up the phone and call the Agents to kill Jessie Blueman.
 The Agents arrived in his home village, Vinton, and was located in a meth lab allegedly owned by him. 
 The Agents then shot and killed Jessie Blueman
-[[Your Election has been secured | DictatorDead]]</I>    
+[[Your Election has been secured | Dictator]]</I>    
 
 :: JacquesAlive1
 <I> Advisor Jacques goes to pick up the phone and calls the Agents to kill Jessie Blueman.
 The Agents arrived in his home village, Vinton, and was located in a meth lab allegedly owned by him. 
 Advisor Jacques then reports back to you and states that Jessie Blueman has been killed. <<set $JacquesRebellion to true>>
-[[Your Election has been secured | DictatorAlive]]</I>
+[[Your Election has been secured | Dictator]]</I>
 
 :: Passage BadYes2
 <<print $name>>: Advisor Jacques, I would like for you to send down the Agents to investigate into this individiual.
@@ -210,15 +210,15 @@ to stop the bleeding, scorching his throat internally, and dies of choking on hi
 
 :: report1
 <I> A National Newspaper reports later that night the Bluemans have been bombed including Jessie. <<set $rep -= 10>>
-[[Your Election has been secured | DictatorDead]] </I>
+[[Your Election has been secured | Dictator]] </I>
 
 :: JacquesBreathe1
 <I> A National Newspaper reports later that night the Bluemans have been bombed including Jessie. <<set $rep -= 10>>
-[[Your Election has been secured | DictatorAlive]] </I> <<set $JacquesRebellion to true>>
+[[Your Election has been secured | Dictator]] </I> <<set $JacquesRebellion to true>>
 
 <!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------PRESIDENT---------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
 
@@ -248,7 +248,7 @@ of low food count. The death count of starvation is rising. The people of your c
 <I> A month passes and a National newspaper is released stating that over half of the population has died of starvation.
 Current population: 2,000,000
 <<set $rep -= 10>>
-[[Proceed | Nothing1]]
+[[Proceed | chicken]]
 <!--come back as this will skip the whole act -->
 
 :: War
@@ -290,13 +290,9 @@ Population of Borgia: 1,550,000
 dissapointed in saw your actions of a lack of leadership.</I><<set $rep -= 10>>
 [[Proceed | chicken]]
 
-:: Nothing1
-<I>The people of Usmana watch you closely to see what you will do about the current food crisis.</I>
-Advisor Jacques: The country is in great dire for food President <<print $name>>.
-[[Subsidize farmers | Nothing2 ]]
+:: chicken
+hola
 
-:: Nothing2
-<I>
 
 :: Impeachment 
 <I> After your actions, you have been deemed unfit for president and have been impeached.
@@ -329,19 +325,4 @@ During your last breath, your last thought was... </I>
 [[Could I do better? | Start]]
 
 
-<!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------------------------->
-<!------------------------------------------------DICTATOR JACQUES ALIVE------------------------------------------------>
-<!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------------------------->
-
-:: DictatorAlive 
-
-
-<!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------------------------->
-<!------------------------------------------------DICTATOR JACQUES DEAD------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------------------------->
-
-:: DictatorDead
+:: Dictator
