@@ -254,7 +254,7 @@ of low food count. The death count of starvation is rising. The people of your c
 <I> A month passes and a National newspaper is released stating that over half of the population has died of starvation.
 Current population: 2,000,000
 <<set $rep -= 10>>
-[[Proceed | Nothing1]]
+[[Proceed | chicken]]
 <!--come back as this will skip the whole act -->
 
 :: War
@@ -274,6 +274,10 @@ Population of Usmana: 1,900,000
 Population of Borgia: 1,700,000 <<set $rep -= 3>>
 [[Bomb Borgia | Bomb1]]
 [[Continue the War | War3]]
+<I> With the war still ragaing many people from both sides are being killed as both sides are both matched in terms of miliatry power
+The war is now becoming a stale mate as both sides are now and are engaging in trench warfare with no real gains. So the casualties are only just rising </I>
+ <I> You decice that the best course of action that can be taken place is that you asked your commadners if its time to use chmecial weaposn in the hopes of having a swift and descive victory on your enemy </I>
+ <I>  So with your commanders using chemcial weapons, you gain the initaive and catch the enemy by surpise, 
 [[Retreat | Retreat1]]
 
 :: Bomb1
@@ -296,13 +300,7 @@ Population of Borgia: 1,550,000
 dissapointed in saw your actions of a lack of leadership.</I><<set $rep -= 10>>
 [[Proceed | chicken]]
 
-:: Nothing1
-<I>The people of Usmana watch you closely to see what you will do about the current food crisis.</I>
-Advisor Jacques: The country is in great dire for food President <<print $name>>.
-[[Subsidize farmers | Nothing2 ]]
-
-:: Nothing2
-<I>
+:: chicken
 
 :: Impeachment 
 <I> After your actions, you have been deemed unfit for president and have been impeached.
