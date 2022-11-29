@@ -6,7 +6,7 @@ Before you start the game please enter your name: <<textbox "$name" 'Type name H
 [[Quit| Passage 2]]
 
 :: PassageFooter
-
+<br />
 Current Reputation: <<print $rep>>
 
 :: Passage 2
