@@ -51,7 +51,9 @@ Inflation runs rampant, which is driving prices incredibly high. How would you l
 [[Raise Taxes | RaiseTaxes]]
 
 :: LowerTaxes
+You lower taxes on the people, reducing their financial stresses. However, less taxes means less government money. It will take time before the economy stabilizes. <<set $rep += 1>>
 
+[[Proceed | ]]
 
 :: RaiseTaxes
 
