@@ -39,7 +39,7 @@ This game does not have a functioning quit button :C, so..... [[Start| Start]] t
 :: Good Path
 You, <<print $name>>, newly elected president of the nation of Usmana, have inherited a broken country. Your predecessor was a total failure, and has left the country with more problems than ever.
 
-Your advisor, Jacques, presents you with a list of issues that you must fix by the year's end.
+Your advisor, Jacques, presents you with a list of issues that you must fix by your term's end.
 
 [[Fix Economy | FixEconomy]]
 [[Fix Food Crisis | FoodCrisis]]
@@ -140,6 +140,8 @@ You send soldiers to crime hotspots around the country. They are able to prevent
 
 [[Proceed | ProblemHub]]
 
+
+
 :: ProblemHub
 You glance back at the list of problems before you.
 
@@ -153,7 +155,9 @@ You glance back at the list of problems before you.
 
 
 :: Retire
-goodbye
+Throughout your presidency, you've solved all of your country's problems. As the election season begins, you have an important decision to make...
+
+[[Proceed | Bad Path]]
 
 <!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
@@ -401,7 +405,7 @@ pick up his phone and hear the voice of the child. THE CHILD with impending deat
 [[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye]]
 [[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye]]
 [[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye]]
-Usmana Population: 4,000,000 <<set $rep -= 1000000000>>
+Usmana Population: 4,000,000
 
 :: BluemanByeBye
 <I>You pick up the phone and call the Agents to find Jessie; however, the Agents couldn't find him with a 2 month search.
