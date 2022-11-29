@@ -352,10 +352,9 @@ Advisor Jacques: THAT'S INSANE, WHY WOULD YOU DO THAT?!
 <<print $name>>: Are you questioning my command? I should of just killed you when you questioned me earlier.
 <I> Jacques picks up his phone. As soon as you see him raise the phone to his ear you pulled out your gun and
 shoot him in the head. The bullet had enough force to make his skull exploded leaving blood everywhere. You 
-pick up his phone and hear the voice of the child. A child with impending death in his eyes.</I>
-<I>"A Child asks for the last piece of bread that you have. You look at the poor child's face, you can see impending death in his eyes."</I> 
-<<print $name>>: I knew it Jacques! YOU FUCKING LIAR! I KNEW IT! You never sent the Agents to kill Jessie. 
-He must still be alive. 
+pick up his phone and hear the voice of the child. THE CHILD with impending death in his eyes.</I>
+<I>"A Child asks for the last piece of bread that you have. You look at the poor child's face, you can see impending DEATH in his eyes."</I> 
+<<print $name>>: I knew it Jacques! YOU FUCKING LIAR! I KNEW IT! YOU NEVER SENT THE AGENTS! HE MUST STILL BE ALIVE!
 [[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye]]
 [[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye]]
 [[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye]]
@@ -364,23 +363,53 @@ Usmana Population: 4,000,000
 :: BluemanByeBye
 <I>You pick up the phone and call the Agents to find Jessie; however, the Agents couldn't find him with a 2 month search.
 While you were focused on the hunt on Jessie, many of the people of Usmana died of starvation due to your lack of attention
-of the current food crisis.</I>
+of the current food crisis. You recieved a letter from a child of the age of 12 asking to help save the people of Usmana from starvation.</I>
 Usmana Population: 2,000,000
 [[FIX food crisis | FixFoodCrisis]]
 [[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye2]]
+[[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye2]]
+[[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye2]]
 
 :: FixFoodCrisis
+<I>You send out men to kill those younger than the age of 18 or older of the age of 40 to reduce food consumption.</I>
+Usmana Population: 430,000
+[[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye2]]
+[[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye2]]
+[[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye2]]
 
 :: BluemanByeBye2
+<I> You picked up the phone and called the Agents to kill Jessie. The Agents told you that they could not find a single clue on where Jessie
+is located. They informed you that it will be a waste of time. You tell them to do the search anyways.
+A month passes and you get a phone call from the Agents and you pick it up.</I>
+<<print $name>>: Hello.
+BLUEMAN: Your time is up <<print $name>>.
+<I>You here the voice of THE CHILD with IMPENDING DEATH in his eye
+A gunshot is heard.</I>
+[[Proceed | gameover]]
 
+:: gameover
+</I>A National newspaper is sent out, curropted president <<print $name>> is killed by Jessie Blueman. The power that is available to the President
+is questioned by the people. The people carefully watch the next President to make sure they make the right changes to the country that it needs.</I>
+[[rerun for preisdent | start]]
 :: GoLand
 <I>You send a message over to the ruler of Borgia stating that you will be claiming the land the lies between the borders.
 The ruler of Borgia states that they already had their eyes on it first and think they should claim the land.
 He concludes his message by saying if you go any further to claim the land he will declare war.</I>
-[[Blow up the Capitol of Borgia | BlowUp]]
-[[Send the Agents to assassinate the ruler of Borgia | Assassinate ]]
+Population of Borgia: 1,800,000
+[[NUKE BORGIA | BlowUp]]
+[[NUKE BORGIA | BlowUp]]
+[[NUKE BORGIA | BlowUp]]
 
-:: 
+:: BlowUp
+Population of Borgia: 0
+<I>You sent all the nukes available to cover the entire country of Borgia. You felt like this has solved nothing. But it has brought
+temporary enjoyment. Advisor Jacques notifies you that the nuclear bombs have left radiation over the land you were fighting for. 
+The land now renders useless. You suggest a solution to fix the hunger.</I>
+[[KILL the people so we have less mouths to feed | Genocide1]]
+[[KILL the people so we have less mouths to feed | Genocide1]]
+[[KILL the people so we have less mouths to feed | Genocide1]]
+
+
 
 <!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
