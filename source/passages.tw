@@ -130,5 +130,58 @@ to stop the bleeding, scorching his throat internally, and dies of choking on hi
 [[Your Election has been secured | Dictator]] </I> <<set $JacquesRebellion to true>>
 
 :: President
+<I>The election ended 2 months and you won without competition. It is now present day and Jacques notifies you about the current
+state of affairs.</I>
+Advisor Jacques: President <<print $name>>, there is some land that is up grabs that is bordering us and Borgia. It seems like it 
+would benefit us quite well. Our agriculture resources are dwindiling and would benefit due to the land being rich in resources.
+[[President <<print $name>>: Let's go for the land | GoForIt]]
+[[President <<print $name>>: I think it will raise tension with Borgia | BorgiaClaimLand]]
+
+:: GoForIt
+<I> You send a message over to the ruler of Borgia stating that you will be claiming the land the lies between the borders.
+The ruler of Borgia states that they already had their eyes on it first and think they should claim the land.
+He concludes his message by saying if you go any further to claim the land he will declare war.</I>
+[[Go for the land | War]]
+[[Let the ruler of Borgia claim the land | BorgiaClaimLand]]
+
+:: BorgiaClaimLand
+<I> You let the ruler of Borgia claim the land. A couple months pass and a National newspaper is sent out stating the current state
+of low food count. The death count of starvation is rising. The people of your country are looking to you for answers.</I>
+[[Go to war | War]]
+[[Do nothing | DoNothing]]
+
+
+:: DoNothing 
+<I> A month passes and a National newspaper is released stating that over half of the population has died of starvation.
+Current population: 2,000,000
+<<set $rep -= 10>>
+[[Proceed | chicken]]
+<!--come back as this will skip the whole act -->
+
+:: War
+<I> You Declare war on Borgia for the land that lies between your countries.</I>
+Population of Usmana: 4,000,000
+Population of Borgia: 1,800,000
+[[Proceed | War2]]
+<<set $rep -= 5>>
+
+
+:: War2
+<I> After 3 Months of bloodshed and battle, it still continues. Your army is holding front lines however due to the 
+lack of food your army can only keep a hold for a couple of weeks. Advisor Jacques advises to end the battle quick or to
+surrender. The population has dropped drastically due to starvation and war casualties</I>
+Population of Usmana: 1,900,000
+Population of Borgia: 1,700,000 
+[[Bomb Borgia | Bomb1]]
+[[Continue the War | War3]]
+[[Retreat | Retreat1]]
+
+:: Bomb1
+<>
+:: War3
+
+:: Retreat1
+
+:: chicken
 
 :: Dictator
