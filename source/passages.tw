@@ -1,6 +1,8 @@
 :: Start
  The Uprising 
 Before you start the game please enter your name: <<textbox "$name" 'Type name Here'>>
+<<set $rep = 0>>
+<<set $JacquesRebellion to false>>
 
 [[Start|Passage 3]]
 [[Quit| Passage 2]]
@@ -41,7 +43,7 @@ This game does not have a functioning quit button :C, so..... [[Start| Start]] t
 <<print $name>>: [[Yes, that is quite interesting... | Passage BadYes2]]
 
 :: Passage BadNo1
-?: What the sweaty bullocks, Mr President! Why are you not running for president?
+?: What the sweaty bullocks, President <<print $name>>! Why are you not running for president?
 <<print $name>>: [[Jacques, Why would I run when I am already ruler for life? | Passage BadNo2]]
 
 :: Passage BadNo2
@@ -210,9 +212,32 @@ hola
 :: Impeachment 
 <I> After your actions, you have been deemed unfit for president and have been impeached.
 Being an only child and having both of your parents deceased you have no where else to live.
+Population of Usmana: 1,500,000
 Your money was taken.
 Everyone despises you.
 All that is left for you is to sleep on the roads.
+With the lack of food no one is fit to run for preisdent.
+Population of Usmana: 1,000,000
+Those who left the country for food moved to Borgia... However they will die due to the radiation
+Population of Usmana: 300,000
+Usmana is now a country with no government.
+No president.
+No leader.
+No hero. 
+Population of Usmana: 127,000
+No other country is willing to give enough money and food to bring Usmana back on it's feet again.
+Those with money booked airplane tickets for better life.
+Population of Usmana: 12,000
+Those who lived in poverty were there to suffer the most.
+They sent their kids to fight for you for the pay.
+They sent their kids to fight for you for the food.
+In return they died of starvation.
+In return they lost their kids.
+Population of Usmana: 1
+You lie on the streets dead due to starvation.
+Population of Usmana: 0
+During your last breath, your last thought was... </I>
+[[Could I do better? | Start]]
 
 
 :: Dictator
