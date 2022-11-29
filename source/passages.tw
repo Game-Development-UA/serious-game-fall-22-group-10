@@ -248,7 +248,7 @@ of low food count. The death count of starvation is rising. The people of your c
 <I> A month passes and a National newspaper is released stating that over half of the population has died of starvation.
 Current population: 2,000,000
 <<set $rep -= 10>>
-[[Proceed | Nothing1]]
+[[Proceed | chicken]]
 <!--come back as this will skip the whole act -->
 
 :: War
@@ -290,13 +290,7 @@ Population of Borgia: 1,550,000
 dissapointed in saw your actions of a lack of leadership.</I><<set $rep -= 10>>
 [[Proceed | chicken]]
 
-:: Nothing1
-<I>The people of Usmana watch you closely to see what you will do about the current food crisis.</I>
-Advisor Jacques: The country is in great dire for food President <<print $name>>.
-[[Subsidize farmers | Nothing2 ]]
-
-:: Nothing2
-<I>
+:: chicken
 
 :: Impeachment 
 <I> After your actions, you have been deemed unfit for president and have been impeached.
