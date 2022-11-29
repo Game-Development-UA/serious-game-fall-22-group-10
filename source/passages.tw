@@ -111,7 +111,7 @@ By directing money towards military production, you are producing more weapons t
 [[Proceed | ProblemHub]]
 
 :: Research
-You pour money into military research, which results in more military might, as well as increasing jobs around the country. <<set $rep += 4>> <<set militaryfixed = true>>
+You pour money into military research, which results in more military might, as well as increasing jobs around the country. <<set $rep += 4>> <<set $militaryfixed = true>>
 
 [[Proceed | ProblemHub]]
 
@@ -420,7 +420,7 @@ He concludes his message by saying if you go any further to claim the land he wi
 [[Blow up the Capitol of Borgia | BlowUp]]
 [[Send the Agents to assassinate the ruler of Borgia | Assassinate ]]
 
-:: 
+:: h
 
 <!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
