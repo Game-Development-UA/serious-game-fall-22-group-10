@@ -15,7 +15,7 @@ Current Reputation: <<print $rep>>
 This game does not have a functioning quit button :C, so..... [[Start| Start]] the game?
 
 :: Passage 3
-<I>A Child asks for the last piece of bread that you have. You look at the poor child's face, you can see his impending death in his eyes.</I> 
+<I>A Child asks for the last piece of bread that you have. You look at the poor child's face, you can see impending death in his eyes.</I> 
 [[Give Bread|Passage 4]]
 [[Keep Bread|Passage 5]]
 
@@ -223,7 +223,7 @@ to stop the bleeding, scorching his throat internally, and dies of choking on hi
 <!---------------------------------------------------------------------------------------------------------------------->
 
 :: President
-<I>The election ended 2 months and you won without competition. It is now present day and Jacques notifies you about the current
+<I>The election ended 2 months ago and you won without competition. It is now present day and Jacques notifies you about the current
 state of affairs.</I>
 Advisor Jacques: President <<print $name>>, there is some land that is up grabs that is bordering us and Borgia. It seems like it 
 would benefit us quite well. Our agriculture resources are dwindiling and would benefit due to the land being rich in resources.
@@ -231,14 +231,14 @@ would benefit us quite well. Our agriculture resources are dwindiling and would 
 [[I think it will raise tension with Borgia | BorgiaClaimLand]]
 
 :: GoForIt
-<I> You send a message over to the ruler of Borgia stating that you will be claiming the land the lies between the borders.
+<I>You send a message over to the ruler of Borgia stating that you will be claiming the land the lies between the borders.
 The ruler of Borgia states that they already had their eyes on it first and think they should claim the land.
 He concludes his message by saying if you go any further to claim the land he will declare war.</I>
 [[Go for the land | War]]
 [[Let the ruler of Borgia claim the land | BorgiaClaimLand]]
 
 :: BorgiaClaimLand
-<I> You let the ruler of Borgia claim the land. A couple months pass and a National newspaper is sent out stating the current state
+<I>You let the ruler of Borgia claim the land. A couple months pass and a National newspaper is sent out stating the current state
 of low food count. The death count of starvation is rising. The people of your country are looking to you for answers.</I>
 [[Go to war | War]]
 [[Do nothing | DoNothing]]
@@ -322,7 +322,7 @@ Population of Usmana: 0
 During your last breath, your last thought was... </I>
 [[Could I do better? | Start]]
 
-E
+
 <!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
 <!------------------------------------------------DICTATOR JACQUES ALIVE------------------------------------------------>
@@ -330,7 +330,47 @@ E
 <!---------------------------------------------------------------------------------------------------------------------->
 
 :: DictatorAlive 
-with the dictator alive
+<I>The election ended 2 months ago and you won without competition. It is now present day and Jacques notifies you about the current
+state of affairs.</I>
+Advisor Jacques: President <<print $name>>, there is some land that is up grabs that is bordering us and Borgia. It seems like it 
+would benefit us quite well. Our agriculture resources are dwindiling and would benefit due to the land being rich in resources.
+[[How about we just kill the people so we have less mouths to feed | Genocide1]]
+[[Let's go for the land | GoLand]]
+
+:: Genocide1
+Advisor Jacques: THAT'S INSANE, WHY WOULD YOU DO THAT?!
+<<print $name>>: Are you questioning my command? I should of just killed you when you questioned me earlier.
+<I> Jacques picks up his phone. As soon as you see him raise the phone to his ear you pulled out your gun and
+shoot him in the head. The bullet had enough force to make his skull exploded leaving blood everywhere. You 
+pick up his phone and hear the voice of the child. A child with impending death in his eyes.</I>
+<I>"A Child asks for the last piece of bread that you have. You look at the poor child's face, you can see impending death in his eyes."</I> 
+<<print $name>>: I knew it Jacques! YOU FUCKING LIAR! I KNEW IT! You never sent the Agents to kill Jessie. 
+He must still be alive. 
+[[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye]]
+[[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye]]
+[[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye]]
+Usmana Population: 4,000,000
+
+:: BluemanByeBye
+<I>You pick up the phone and call the Agents to find Jessie; however, the Agents couldn't find him with a 2 month search.
+While you were focused on the hunt on Jessie, many of the people of Usmana died of starvation due to your lack of attention
+of the current food crisis.</I>
+Usmana Population: 2,000,000
+[[FIX food crisis | FixFoodCrisis]]
+[[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye2]]
+
+:: FixFoodCrisis
+
+:: BluemanByeBye2
+
+:: GoLand
+<I>You send a message over to the ruler of Borgia stating that you will be claiming the land the lies between the borders.
+The ruler of Borgia states that they already had their eyes on it first and think they should claim the land.
+He concludes his message by saying if you go any further to claim the land he will declare war.</I>
+[[Blow up the Capitol of Borgia | BlowUp]]
+[[Send the Agents to assassinate the ruler of Borgia | Assassinate ]]
+
+:: 
 
 <!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
