@@ -26,13 +26,43 @@ This game does not have a functioning quit button :C, so..... [[Start| Start]] t
 :: Passage 5
 <I>The child remembers your action</I>
 <<set $Jessielikeyou to false>>
-[[Proceed| Passage 6]]<<set $rep -= 1>>
+[[Proceed| Bad Path]]<<set $rep -= 1>>
 
 <!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
 <!-----------------------------------------------GIVE BREAD TO JESSIE--------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
+
+:: Good Path
+You, <<print $name>>, newly elected president of the nation of Usmana, have inherited a broken country. Your predecessor was a total failure, and has left the country with more problems than ever.
+
+Your advisor, Jacques, presents you with a list of issues that you must fix by the year's end.
+
+[[Fix Economy | FixEconomy1]]
+[[Fix Food Crisis | FoodCrisis1]]
+[[Fix Military | FixMilitary1]]
+[[Fix Crime Outbreak | FixCrime1]]
+
+:: FixEconomy1
+Inflation runs rampant, which is driving prices incredibly high. How would you like to solve this problem?
+
+[[Lower Taxes | LowerTaxes]]
+[[Raise Taxes | RaiseTaxes]]
+
+:: LowerTaxes
+
+
+:: RaiseTaxes
+
+
+:: FoodCrisis1
+
+
+:: FixMilitary1
+
+
+:: FixCrime1
 
 
 
@@ -43,7 +73,7 @@ This game does not have a functioning quit button :C, so..... [[Start| Start]] t
 <!---------------------------------------------------------------------------------------------------------------------->
 
 
-:: Passage 6
+:: Bad Path
 ?: Hello President <<print $name>>, The elections are coming up do you plan of running again?
 [[Yes | Passage BadYes1]]
 [[No | Passage BadNo1]]

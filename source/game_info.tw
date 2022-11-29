@@ -16,3 +16,7 @@ The Uprising
 <<set $Jessielikeyou to true>>
 <<set $testing to false>>
 <<set $JacquesRebellion to false>>
+<<set $economyfixed to false>>
+<<set $foodfixed to false>>
+<<set $militaryfixed to false>>
+<<set $crimefixed to false>>
