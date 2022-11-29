@@ -78,10 +78,24 @@ By exporting your excess, you are able to not only return people's faith in the 
 As a result of the previous president's incompetence, your people are left starving. What solution do you propose?
 
 [[Increase spending on agriculture | Agriculture]]
-[[]]
+[[Increase trade with neighboring countries | Trade]]
+
+:: Agriculture
+You opt to support your producers. By giving them more money, they are able to farm cheaper and more efficiently, increasing crop yields. <<set $rep += 2>> <<set $foodfixed  = true>>
+
+[[Proceed | ProblemHub]]
+
+:: Trade
+You relax trade restrictions, and allow more food to be brought into your country. The people, however grateful, dislike being dependent on another country for food. <<set rep -= 2>> <<set $foodfixed = true>>
+
+[[Proceed | ProblemHub]]
+
+
 
 :: FixMilitary1
+Usmana's military is left in tatters. Poorly trained and barely supplied, your country is vulnerable to attacks from both the outside and inside. What's your plan?
 
+[[]]
 
 :: FixCrime1
 
@@ -89,25 +103,17 @@ As a result of the previous president's incompetence, your people are left starv
 :: ProblemHub
 You glance back at the list of problems before you.
 
-<<if $economyfixed and $foodfixed and $militaryfixed and $crimefixed>>
-[[Proceed | Retire]]
+<<if $economyfixed and $foodfixed and $militaryfixed and $crimefixed>>[[Proceed | Retire]]
 <<else>>
-    <<if $economyfixed == false>>
-    [[Fix Economy | FixEconomy1]]
-    <</if>>
-    <<if $foodfixed == false>>
-    [[Fix Food Crisis | FoodCrisis1]]
-    <</if>>
-    <<if $militaryfixed == false>>
-    [[Fix Military | FixMilitary1]]
-    <</if>>
-    <<if $crimefixed == false>>
-    [[Fix Crime Outbreak | FixCrime1]]
-    <</if>>
+    <<if $economyfixed == false>>[[Fix Economy | FixEconomy1]]<</if>>
+    <<if $foodfixed == false>>[[Fix Food Crisis | FoodCrisis1]]<</if>>
+    <<if $militaryfixed == false>>[[Fix Military | FixMilitary1]]<</if>>
+    <<if $crimefixed == false>>[[Fix Crime Outbreak | FixCrime1]]<</if>>
 <</if>>
 
 
 :: Retire
+goodbye
 
 <!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
