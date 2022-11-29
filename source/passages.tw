@@ -1,52 +1,83 @@
 :: Start
-The Uprising 
+ The Uprising 
 Before you start the game please enter your name: <<textbox "$name" 'Type name Here'>>
 
 [[Start|Passage 3]]
 [[Quit| Passage 2]]
 
 :: PassageFooter
-Current Rep: <<print $rep>>
+
+Current Reputation: <<print $rep>>
 
 :: Passage 2
-This game does not have a functioning quit button :C, so..... [[Start| Passage 3]] the game?
+This game does not have a functioning quit button :C, so..... [[Start| Start]] the game?
 
 :: Passage 3
-A Child asks for the last piece of bread that you have. You look at the poor child's face, you can see his impending death in his eyes. 
+<I>A Child asks for the last piece of bread that you have. You look at the poor child's face, you can see his impending death in his eyes.</I> 
 [[Give Bread|Passage 4]]
 [[Keep Bread|Passage 5]]
-<<if $testing == true>> [[test mode|Passage 4]]
-<<else>> [[no test mode|Passage 5]]
-<</if>>
+
 
 :: Passage 4
-The child remembers your action 
+<I>The child remembers your action </I>
 <<set $Jessielikeyou to true>>
 [[Proceed| Passage 6]] <<set $rep += 1>>
 
-rep test <<print $rep>>
 :: Passage 5
-The child remembers your action 
+<I>The child remembers your action</I>
 <<set $Jessielikeyou to false>>
 [[Proceed| Passage 6]]<<set $rep -= 1>>
 
 
 :: Passage 6
-?: Hello <<if $rep < 0 >>
-Master <<print $name>>, The elections are coming up do you plan of running again?
+?: Hello President <<print $name>>, The elections are coming up do you plan of running again?
 [[Yes | Passage BadYes1]]
 [[No | Passage BadNo1]]
-<<else>> Sir <<print $name>>
-<</if>>
+
 
 :: Passage BadYes1
-?: Aye! Marvioulous Master. Your opposing canditdate seems to be a guy name Jessie Blueman who comes from a poor village named New Mexico. I wonder how he has gotten money to support his campaign?
+?: Aye! Marvioulous Mr President. Your opposing canditdate seems to be a guy name Jessie Blueman who comes from a poor village named Vinton. People are wondering how he has gotten money to support his campaign?
 
-<<print $name>>: [[Yes, that is quite interesting... | Passage 8]]
+<<print $name>>: [[Yes, that is quite interesting... | Passage BadYes2]]
 
 :: Passage BadNo1
-What the sweaty bullocks, man! Why are you not running for president? <<set $rep -= 2>>
-[[Why would I run when I am already ruler for life? | Passage BadNo2]]
+?: What the sweaty bullocks, Mr President! Why are you not running for president?
+<<print $name>>: [[Jacques, Why would I run when I am already ruler for life? | Passage BadNo2]]
+
+:: Passage BadNo2
+Advisor Jacques: What do you mean ruler for life? No matter what you still have an opponent runnings against you. <<set $rep -= 2>>
+<<print $name>>: What do you mean by opponent?
+Advisor Jacques: A man named Jessie Blueman is running for President who comes from a poor village named Vinton.
+<<print $name>>: Have the Agents sent down and have him killed.
+[[Proceed | BadNo3]]
+
+:: BadNo3
+Advisor Jacques: Why would we send the Agents down to kill him?
+
+<I>As elected preisdent, you question Advisor Jacques' loyalty</I>
+[[Kill Advisor Jacques | JacquesDead1]]
+[[Let it slide | JacquesAlive1]]
+
+:: JacquesDead1
+<<print $name>>: Advisor Jacques I would like to show you a little magic trick. Pass me the letter opener. <<set $rep += 2>>
+<I>Advisor Jacques grabs the letter opener and as he hands it over to you he asks</I>
+Advisor Jacques: What's the magic trick?
+<<print $name>>: You want to see this thing disappear?
+<I>Before he responds you jump out of you seat and raise the letter opener to throw it with all your might into his right eye. 
+You watch as blood spews from his cranium and paints the walls and your furniture with blood.</I>
+[[Send the Agents down to kill Jessie Blueman | JacquesDead2]]  
+
+:: JacquesDead2
+<I> You go pick up the phone and call the Agents to kill Jessie Blueman.
+The Agents arrived in his home village, Vinton, and was located in a meth lab allegedly owned by him. 
+The Agents then shot and killed Jessie Blueman
+[[Your Election has been secured | Dictator]]</I>    
+
+:: JacquesAlive1
+<I> Advisor Jacques goes to pick up the phone and calls the Agents to kill Jessie Blueman.
+The Agents arrived in his home village, Vinton, and was located in a meth lab allegedly owned by him. 
+Advisor Jacques then reports back to you and states that Jessie Blueman has been killed. <<set $JacquesRebellion to true>>
+[[Your Election has been secured | Dictator]]</I>
 
 :: Passage BadYes2
 <<print $name>>: Advisor Jacques, I would like for you to send down the Agents to investigate into this individiual.
@@ -54,27 +85,50 @@ Advisor Jacques: Got it, Mr President!
 [[Proceed | Passage BadYes3]]
 
 :: Passage BadYes3
-The Agents have arrived into the poor village, New Mexico. They await for your orders
+<I>The Agents have arrived into the poor village, Vinton. They await for your orders</I>
 [[Investigate his income | Income1]]
 [[Investigate his family | Family1]]
 
 :: Income1
-Agents: Roger that, Mr President.
-The Agents discover Jessie Blueman has obtained his money by selling illegally manufactured crystal METH.
+<I>The Agents discover Jessie Blueman has obtained his money by selling illegally manufactured crystal meth.</I>
 [[Go public with the information | Public1]]
 [[Blackmail your opponent | Blackmail1]]
 
 :: Public1
-You release your findings to the public through a national newspaper. Jessie Blueman is promptly arrested.
-With no one to contest you in the election, you are able to win with a record number of votes.
+<I>You release your findings to the public through a national newspaper. Jessie Blueman is promptly arrested.
+With no one to contest you in the election, you are able to win with a record number of votes.</I>
 [[2nd term babyyyyyyy | President]]
 
 :: Blackmail1
-You threaten to release the results of the investigation to the public if he does not step down from his campaign.
-With his reputation on the line, Jessie Blueman removes himself from consideration, and you win the election uncontested.
+<I>You threaten to release the results of the investigation to the public if he does not step down from his campaign.
+With his reputation on the line, Jessie Blueman removes himself from consideration, and you win the election uncontested.</I>
 [[2nd term babyyyyyyy | President]]
 
 :: Family1
+<I>The Agents investigate his family; however, the family noticed the Agents and called them out releasing this information to the public.</I> <<set $rep -= 1>>
+[[Kill his family | FamilyDead]]
+[[Investigate further| Income1]]
 
+:: FamilyDead
+<<print $name>>: Advisor Jacques, I would like for you to call the Agents to bomb the Bluemans. <<set $rep -= 2>>
+Advisor Jacques: Why should we bomb them?
+<I>You question Advisor Jacques loyalty.</I>
+[[Kill Advisor Jacques | JacquesByeBye1]]
+[[Let it slide | JacquesBreathe1]]
+
+:: JacquesByeBye1
+<I>You grab the letter opener and slice Jacque's throat spewing blood all over your face. You jab a lit cigarette into his throat
+to stop the bleeding, scorching his throat internally, and dies of choking on his own blood. <<set $rep += 2>>
+[[You then call the Agents to bomb the Bluemans | report1]]</I>
+
+:: report1
+<I> A National Newspaper reports later that night the Bluemans have been bombed including Jessie. <<set $rep -= 10>>
+[[Your Election has been secured | Dictator]] </I>
+
+:: JacquesBreathe1
+<I> A National Newspaper reports later that night the Bluemans have been bombed including Jessie. <<set $rep -= 10>>
+[[Your Election has been secured | Dictator]] </I> <<set $JacquesRebellion to true>>
 
 :: President
+
+:: Dictator
