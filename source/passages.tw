@@ -15,7 +15,7 @@ Current Reputation: <<print $rep>>
 This game does not have a functioning quit button :C, so..... [[Start| Start]] the game?
 
 :: Passage 3
-<I>A Child asks for the last piece of bread that you have. You look at the poor child's face, you can see his impending death in his eyes.</I> 
+<I>A Child asks for the last piece of bread that you have. You look at the poor child's face, you can see impending death in his eyes.</I> 
 [[Give Bread|Passage 4]]
 [[Keep Bread|Passage 5]]
 
@@ -41,14 +41,14 @@ You, <<print $name>>, newly elected president of the nation of Usmana, have inhe
 
 Your advisor, Jacques, presents you with a list of issues that you must fix by the year's end.
 
-[[Fix Economy | FixEconomy1]]
-[[Fix Food Crisis | FoodCrisis1]]
-[[Fix Military | FixMilitary1]]
-[[Fix Crime Outbreak | FixCrime1]]
+[[Fix Economy | FixEconomy]]
+[[Fix Food Crisis | FoodCrisis]]
+[[Fix Military | FixMilitary]]
+[[Fix Crime Outbreak | FixCrime]]
 
 
 
-:: FixEconomy1
+:: FixEconomy
 Inflation runs rampant, which is driving prices incredibly high. How would you like to solve this problem?
 
 [[Lower Taxes | LowerTaxes]]
@@ -74,40 +74,86 @@ By exporting your excess, you are able to not only return people's faith in the 
 
 
 
-:: FoodCrisis1
+:: FoodCrisis
 As a result of the previous president's incompetence, your people are left starving. What solution do you propose?
 
 [[Increase spending on agriculture | Agriculture]]
-[[]]
+[[Increase trade with neighboring countries | Trade]]
 
-:: FixMilitary1
+:: Agriculture
+You opt to support your producers. By giving them more money, they are able to farm cheaper and more efficiently, increasing crop yields. <<set $rep += 2>> <<set $foodfixed  = true>>
+
+[[Proceed | ProblemHub]]
+
+:: Trade
+You relax trade restrictions, and allow more food to be brought into your country. The people, however grateful, dislike being dependent on another country for food. <<set rep -= 2>> <<set $foodfixed = true>>
+
+[[Proceed | ProblemHub]]
 
 
-:: FixCrime1
 
+:: FixMilitary
+Usmana's military is left in tatters. Poorly trained and barely supplied, your country is vulnerable to attacks from both the outside and inside. What's your plan?
+
+[[Hire consultants to help train your soldiers | Consultants]]
+[[Increase supply production | Supplies]]
+
+<<if $economyfixed>>[[Increase spending on military research | Research]]<</if>>
+
+:: Consultants
+You hire outside consultants, who prove to be effective in bringing your soldiers back up to speed on their training. They are now more prepared to deal with any threats. <<set $rep += 1>> <<set $militaryfixed = true>>
+
+[[Proceed | ProblemHub]]
+
+:: Supplies
+By directing money towards military production, you are producing more weapons than ever. While your generals are happy, the populace looks at this as an unnecessary expenditure. <<set $rep -= 2>> <<set $militaryfixed = true>>
+
+[[Proceed | ProblemHub]]
+
+:: Research
+You pour money into military research, which results in more military might, as well as increasing jobs around the country. <<set $rep += 4>> <<set $militaryfixed = true>>
+
+[[Proceed | ProblemHub]]
+
+
+
+:: FixCrime
+Crime runs rampant throughout Usmana's streets. From petty thieves to murderers, no one fears the government's authority. What is your response to this issue?
+
+[[Increase police funding around the country | Police]]
+[[Offer rehabilitation programs to prevent future incidents | Rehab]]
+
+<<if $militaryfixed>>[[Use the military to suppress crime | Suppress]]<</if>>
+
+:: Police
+You give more funding to police departments across the nation. They are now better equipped to deal with any crime. <<set $crimefixed = true>>
+
+[[Proceed | ProblemHub]]
+
+:: Rehab
+By increasing the number of rehabilitation facilities, criminals are less likely to commit any crimes, and crime levels go down. <<set $rep += 2>> <<set $crimefixed = true>>
+
+[[Proceed | ProblemHub]]
+
+:: Suppress
+You send soldiers to crime hotspots around the country. They are able to prevent crime, but the people now live in fear of their government. <<set $rep -= 5>> <<set $crimefixed = true>>
+
+[[Proceed | ProblemHub]]
 
 :: ProblemHub
 You glance back at the list of problems before you.
 
-<<if $economyfixed and $foodfixed and $militaryfixed and $crimefixed>>
-[[Proceed | Retire]]
+<<if $economyfixed and $foodfixed and $militaryfixed and $crimefixed>>[[Proceed | Retire]]
 <<else>>
-    <<if $economyfixed == false>>
-    [[Fix Economy | FixEconomy1]]
-    <</if>>
-    <<if $foodfixed == false>>
-    [[Fix Food Crisis | FoodCrisis1]]
-    <</if>>
-    <<if $militaryfixed == false>>
-    [[Fix Military | FixMilitary1]]
-    <</if>>
-    <<if $crimefixed == false>>
-    [[Fix Crime Outbreak | FixCrime1]]
-    <</if>>
+    <<if $economyfixed == false>>[[Fix Economy | FixEconomy]]<</if>>
+    <<if $foodfixed == false>>[[Fix Food Crisis | FoodCrisis]]<</if>>
+    <<if $militaryfixed == false>>[[Fix Military | FixMilitary]]<</if>>
+    <<if $crimefixed == false>>[[Fix Crime Outbreak | FixCrime]]<</if>>
 <</if>>
 
 
 :: Retire
+goodbye
 
 <!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
@@ -223,7 +269,7 @@ to stop the bleeding, scorching his throat internally, and dies of choking on hi
 <!---------------------------------------------------------------------------------------------------------------------->
 
 :: President
-<I>The election ended 2 months and you won without competition. It is now present day and Jacques notifies you about the current
+<I>The election ended 2 months ago and you won without competition. It is now present day and Jacques notifies you about the current
 state of affairs.</I>
 Advisor Jacques: President <<print $name>>, there is some land that is up grabs that is bordering us and Borgia. It seems like it 
 would benefit us quite well. Our agriculture resources are dwindiling and would benefit due to the land being rich in resources.
@@ -231,14 +277,14 @@ would benefit us quite well. Our agriculture resources are dwindiling and would 
 [[I think it will raise tension with Borgia | BorgiaClaimLand]]
 
 :: GoForIt
-<I> You send a message over to the ruler of Borgia stating that you will be claiming the land the lies between the borders.
+<I>You send a message over to the ruler of Borgia stating that you will be claiming the land the lies between the borders.
 The ruler of Borgia states that they already had their eyes on it first and think they should claim the land.
 He concludes his message by saying if you go any further to claim the land he will declare war.</I>
 [[Go for the land | War]]
 [[Let the ruler of Borgia claim the land | BorgiaClaimLand]]
 
 :: BorgiaClaimLand
-<I> You let the ruler of Borgia claim the land. A couple months pass and a National newspaper is sent out stating the current state
+<I>You let the ruler of Borgia claim the land. A couple months pass and a National newspaper is sent out stating the current state
 of low food count. The death count of starvation is rising. The people of your country are looking to you for answers.</I>
 [[Go to war | War]]
 [[Do nothing | DoNothing]]
@@ -329,7 +375,7 @@ Population of Usmana: 0
 During your last breath, your last thought was... </I>
 [[Could I do better? | Start]]
 
-E
+
 <!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
 <!------------------------------------------------DICTATOR JACQUES ALIVE------------------------------------------------>
@@ -337,7 +383,47 @@ E
 <!---------------------------------------------------------------------------------------------------------------------->
 
 :: DictatorAlive 
-with the dictator alive
+<I>The election ended 2 months ago and you won without competition. It is now present day and Jacques notifies you about the current
+state of affairs.</I>
+Advisor Jacques: President <<print $name>>, there is some land that is up grabs that is bordering us and Borgia. It seems like it 
+would benefit us quite well. Our agriculture resources are dwindiling and would benefit due to the land being rich in resources.
+[[How about we just kill the people so we have less mouths to feed | Genocide1]]
+[[Let's go for the land | GoLand]]
+
+:: Genocide1
+Advisor Jacques: THAT'S INSANE, WHY WOULD YOU DO THAT?!
+<<print $name>>: Are you questioning my command? I should of just killed you when you questioned me earlier.
+<I> Jacques picks up his phone. As soon as you see him raise the phone to his ear you pulled out your gun and
+shoot him in the head. The bullet had enough force to make his skull exploded leaving blood everywhere. You 
+pick up his phone and hear the voice of the child. A child with impending death in his eyes.</I>
+<I>"A Child asks for the last piece of bread that you have. You look at the poor child's face, you can see impending death in his eyes."</I> 
+<<print $name>>: I knew it Jacques! YOU FUCKING LIAR! I KNEW IT! You never sent the Agents to kill Jessie. 
+He must still be alive. 
+[[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye]]
+[[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye]]
+[[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye]]
+Usmana Population: 4,000,000
+
+:: BluemanByeBye
+<I>You pick up the phone and call the Agents to find Jessie; however, the Agents couldn't find him with a 2 month search.
+While you were focused on the hunt on Jessie, many of the people of Usmana died of starvation due to your lack of attention
+of the current food crisis.</I>
+Usmana Population: 2,000,000
+[[FIX food crisis | FixFoodCrisis]]
+[[SEND THE AGENTS TO KILL JESSIE BLUEMAN | BluemanByeBye2]]
+
+:: FixFoodCrisis
+
+:: BluemanByeBye2
+
+:: GoLand
+<I>You send a message over to the ruler of Borgia stating that you will be claiming the land the lies between the borders.
+The ruler of Borgia states that they already had their eyes on it first and think they should claim the land.
+He concludes his message by saying if you go any further to claim the land he will declare war.</I>
+[[Blow up the Capitol of Borgia | BlowUp]]
+[[Send the Agents to assassinate the ruler of Borgia | Assassinate ]]
+
+:: h
 
 <!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
