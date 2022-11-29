@@ -268,6 +268,10 @@ Population of Usmana: 1,900,000
 Population of Borgia: 1,700,000 <<set $rep -= 3>>
 [[Bomb Borgia | Bomb1]]
 [[Continue the War | War3]]
+<I> With the war still ragaing many people from both sides are being killed as both sides are both matched in terms of miliatry power
+The war is now becoming a stale mate as both sides are now and are engaging in trench warfare with no real gains. So the casualties are only just rising </I>
+ <I> You decice that the best course of action that can be taken place is that you asked your commadners if its time to use chmecial weaposn in the hopes of having a swift and descive victory on your enemy </I>
+ <I>  So with your commanders using chemcial weapons, you gain the initaive and catch the enemy by surpise, 
 [[Retreat | Retreat1]]
 
 :: Bomb1
