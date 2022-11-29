@@ -46,22 +46,39 @@ Your advisor, Jacques, presents you with a list of issues that you must fix by t
 [[Fix Military | FixMilitary1]]
 [[Fix Crime Outbreak | FixCrime1]]
 
+
+
 :: FixEconomy1
 Inflation runs rampant, which is driving prices incredibly high. How would you like to solve this problem?
 
 [[Lower Taxes | LowerTaxes]]
 [[Raise Taxes | RaiseTaxes]]
+<<if $foodfixed>>
+[[Export excess food to neighboring countries | Export]]
+<</if>>
 
 :: LowerTaxes
-You lower taxes on the people, reducing their financial stresses. However, less taxes means less government money. It will take time before the economy stabilizes. <<set $rep += 1>>
+You lower taxes on the people, reducing their financial stresses. However, less taxes means less government money. It will take time before the economy stabilizes. <<set $rep += 3>> <<set $economyfixed = true>>
 
-[[Proceed | ]]
+[[Proceed | ProblemHub]]
 
 :: RaiseTaxes
+You raise taxes on the people, causing outrage. Over time, however, you know that the increased funding for government programs will fix things in the long run. <<set $rep -= 1>> <<set $economyfixed = true>>
+
+[[Proceed | ProblemHub]]
+
+:: Export
+By exporting your excess, you are able to not only return people's faith in the government, but boost the economy to a point it hasn't to in years. <<set $rep += 5>> <<set $economyfixed = true>>
+
+[[Proceed | ProblemHub]]
+
 
 
 :: FoodCrisis1
+As a result of the previous president's incompetence, your people are left starving. What solution do you propose?
 
+[[Increase spending on agriculture | Agriculture]]
+[[]]
 
 :: FixMilitary1
 
@@ -69,6 +86,28 @@ You lower taxes on the people, reducing their financial stresses. However, less 
 :: FixCrime1
 
 
+:: ProblemHub
+You glance back at the list of problems before you.
+
+<<if $economyfixed and $foodfixed and $militaryfixed and $crimefixed>>
+[[Proceed | Retire]]
+<<else>>
+    <<if $economyfixed == false>>
+    [[Fix Economy | FixEconomy1]]
+    <</if>>
+    <<if $foodfixed == false>>
+    [[Fix Food Crisis | FoodCrisis1]]
+    <</if>>
+    <<if $militaryfixed == false>>
+    [[Fix Military | FixMilitary1]]
+    <</if>>
+    <<if $crimefixed == false>>
+    [[Fix Crime Outbreak | FixCrime1]]
+    <</if>>
+<</if>>
+
+
+:: Retire
 
 <!---------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------->
