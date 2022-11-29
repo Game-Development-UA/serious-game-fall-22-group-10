@@ -6,7 +6,7 @@ Before you start the game please enter your name: <<textbox "$name" 'Type name H
 [[Quit| Passage 2]]
 
 :: PassageFooter
-
+<br />
 Current Reputation: <<print $rep>>
 
 :: Passage 2
@@ -128,6 +128,12 @@ to stop the bleeding, scorching his throat internally, and dies of choking on hi
 :: JacquesBreathe1
 <I> A National Newspaper reports later that night the Bluemans have been bombed including Jessie. <<set $rep -= 10>>
 [[Your Election has been secured | Dictator]] </I> <<set $JacquesRebellion to true>>
+
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
 
 :: President
 <I>The election ended 2 months and you won without competition. It is now present day and Jacques notifies you about the current
