@@ -86,7 +86,7 @@ You opt to support your producers. By giving them more money, they are able to f
 [[Proceed | ProblemHub]]
 
 :: Trade
-You relax trade restrictions, and allow more food to be brought into your country. The people, however grateful, dislike being dependent on another country for food. <<set rep -= 2>> <<set $foodfixed = true>>
+You relax trade restrictions, and allow more food to be brought into your country. The people, however grateful, dislike being dependent on another country for food. <<set $rep -= 2>> <<set $foodfixed = true>>
 
 [[Proceed | ProblemHub]]
 
