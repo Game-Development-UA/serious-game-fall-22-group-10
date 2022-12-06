@@ -3,6 +3,8 @@
 Before you start the game please enter your name: <<textbox "$name" 'Type name Here'>>
 <<set $rep = 0>>
 <<set $JacquesRebellion to false>>
+:: Intro 
+The Year is 2035, you start your journey as a poor beggar in the country of Usmana, a land plauged by constant war and famine. You have dreams and aspirations of power and little do you know that the opportunity will arise in the near future. In the meantime, you are met with a simple choice dealing with a simple child.
 
 [[Start|Passage 3]]
 [[Quit| Passage 2]]
