@@ -15,18 +15,21 @@ Current Reputation: <<print $rep>>
 This game does not have a functioning quit button :C, so..... [[Start| Start]] the game?
 
 :: Passage 3
-<I>A Child asks for the last piece of bread that you have. You look at the poor child's face, you can see impending death in his eyes.</I> 
+<I>A Child asks for the last piece of bread that you have. You look at the poor child's face, you can see impending death in his eyes.</I>
+<img src="media/TheresAChild.gif">
 [[Give Bread|Passage 4]]
 [[Keep Bread|Passage 5]]
 
 
 :: Passage 4
 <I>The child remembers your action </I>
+<img src="media/give bread.jpg">
 <<set $Jessielikeyou to true>>
 [[Proceed| Good Path]] <<set $rep += 1>>
 
 :: Passage 5
 <I>The child remembers your action</I>
+<img src="media/keep bread.gif">
 <<set $Jessielikeyou to false>>
 [[Proceed| Bad Path]]<<set $rep -= 1>>
 
@@ -168,30 +171,34 @@ Throughout your presidency, you've solved all of your country's problems. As the
 
 :: Bad Path
 ?: Hello President <<print $name>>, The elections are coming up do you plan of running again?
+<img src="media/jacques.jpg">
 [[Yes | Passage BadYes1]]
 [[No | Passage BadNo1]]
 
 
 :: Passage BadYes1
 ?: Aye! Marvioulous President <<print $name>>. Your opposing canditdate seems to be a guy name Jessie Blueman who comes from a poor village named Vinton. People are wondering how he has gotten money to support his campaign?
-
+<img src="media/HappyJacques.jpg">
 <<print $name>>: [[Yes, that is quite interesting... | Passage BadYes2]]
 
 :: Passage BadNo1
 ?: What the sweaty bullocks, President <<print $name>>! Why are you not running for president?
+<img src="media/AngryJacques.jpg">
 <<print $name>>: [[Jacques, Why would I run when I am already ruler for life? | Passage BadNo2]]
 
 :: Passage BadNo2
 Advisor Jacques: What do you mean ruler for life? No matter what you still have an opponent runnings against you. <<set $rep -= 2>>
 <<print $name>>: What do you mean by opponent?
 Advisor Jacques: A man named Jessie Blueman is running for President who comes from a poor village named Vinton.
+<img src="media/no.gif">
 <<print $name>>: Have the Agents sent down and have him killed.
 [[Proceed | BadNo3]]
 
 :: BadNo3
 Advisor Jacques: Why would we send the Agents down to kill him?
-
+<img src="media/Loyalty.jpg">
 <I>As elected preisdent, you question Advisor Jacques' loyalty</I>
+
 [[Kill Advisor Jacques | JacquesDead1]]
 [[Let it slide | JacquesAlive1]]
 
@@ -202,12 +209,14 @@ Advisor Jacques: What's the magic trick?
 <<print $name>>: You want to see this thing disappear?
 <I>Before he responds you jump out of you seat and raise the letter opener to throw it with all your might into his right eye. 
 You watch as blood spews from his cranium and paints the walls and your furniture with blood.</I>
+<img src="media/MagicTrick.webp">
 [[Send the Agents down to kill Jessie Blueman | JacquesDead2]]  
 
 :: JacquesDead2
 <I> You go pick up the phone and call the Agents to kill Jessie Blueman.
 The Agents arrived in his home village, Vinton, and was located in a meth lab allegedly owned by him. 
 The Agents then shot and killed Jessie Blueman
+<img src="media/Phone.gif">
 [[Your Election has been secured | DictatorDead]]</I>    
 
 :: JacquesAlive1
@@ -219,21 +228,26 @@ Advisor Jacques then reports back to you and states that Jessie Blueman has been
 :: Passage BadYes2
 <<print $name>>: Advisor Jacques, I would like for you to send down the Agents to investigate into this individiual.
 Advisor Jacques: Got it, Mr President!
+<img src="media/RogerThat.gif">
 [[Proceed | Passage BadYes3]]
 
 :: Passage BadYes3
 <I>The Agents have arrived into the poor village, Vinton. They await for your orders</I>
+<img src="media/WhatsNext.gif">
 [[Investigate his income | Income1]]
 [[Investigate his family | Family1]]
 
 :: Income1
 <I>The Agents discover Jessie Blueman has obtained his money by selling illegally manufactured crystal meth.</I>
+<img src="media/Meth.gif">
 [[Go public with the information | Public1]]
 [[Blackmail your opponent | Blackmail1]]
 
 :: Public1
 <I>You release your findings to the public through a national newspaper. Jessie Blueman is promptly arrested.
+<img src="media/SadJessie.gif">
 With no one to contest you in the election, you are able to win with a record number of votes.</I>
+<img src="media/Win.gif">
 [[2nd term babyyyyyyy | President]]
 
 :: Blackmail1
