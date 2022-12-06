@@ -344,8 +344,7 @@ Population of Borgia: 1,700,000 <<set $rep -= 3>>
 
 :: Bomb1
 <I> You Dropped a nuclear bomb on the capital of Borgia, however the capital is near the border. The radiation from the blast 
-has left radiation over the frontline. The land is no more suitable for farming. The people of Usmana despise you of resorting to
-nuclear warfare.</I><<set $rep -= 13>>
+has left radiation over the frontline. The land is no more suitable for farming. The people of Usmana despise you of resorting to nuclear warfare.</I><<set $rep -= 13>>
 Population of Usmana: 1,850,000
 Population of Borgia: 1,200 
 [[Proceed | Impeachment]]
